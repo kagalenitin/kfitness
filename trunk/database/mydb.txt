@@ -1,0 +1,188 @@
+CREATE TABLE Advertiser
+     (
+     companyname varchar(80),
+     username varchar(25) NOT NULL,
+     pass varchar(8) NOT NULL,
+     firstname varchar(50) NOT NULL,
+     lastname varchar(50) NOT NULL,
+     address varchar(50) NOT NULL,
+     phone varchar(10) NOT NULL,
+     email varchar(90) NOT NULL UNIQUE,
+    PRIMARY KEY(username)
+);
+
+CREATE TABLE MobileUser
+(
+username VARCHAR(25),
+password VARCHAR(8) NOT NULL,
+firstname VARCHAR(50) NOT NULL,
+lastname VARCHAR(50) NOT NULL,
+address VARCHAR(100) NOT NULL,
+phone VARCHAR(10) NOT NULL,
+email VARCHAR(90) UNIQUE,
+PRIMARY KEY (username)
+);
+
+CREATE TABLE Channel
+(
+channelID INT(7) AUTO_INCREMENT,
+channelname VARCHAR(50) NOT NULL UNIQUE,
+channeldescription VARCHAR(250) NOT NULL,
+PRIMARY KEY (channelID)
+);
+alter table Channel AUTO_INCREMENT=1;
+
+CREATE TABLE Payment
+(
+paymentID VARCHAR(10) NOT NULL PRIMARY KEY,
+username varchar(25) NOT NULL,
+paymentdetails VARCHAR(100) NOT NULL,
+FOREIGN KEY (username) REFERENCES Advertiser(username));
+
+CREATE TABLE ChannelSchedule
+(
+    channelID INT(7) NOT NULL,
+    channelstartdate DATE NOT NULL,
+    channelenddate DATE NOT NULL,
+    FOREIGN KEY (channelID) REFERENCES Channel(channelID)
+);
+
+Create table MobileSub(
+subscribeID INT(7) PRIMARY KEY,
+username varchar(25) NOT NULL,
+channelID INT(7) NOT NULL,
+FOREIGN KEY (username) REFERENCES MobileUser(username),
+FOREIGN KEY (channelID) REFERENCES Channel(channelID)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+alter table MobileSub AUTO_INCREMENT=1;
+
+CREATE TABLE MerchantLocation
+(
+merchantlocationID INT(7) AUTO_INCREMENT,
+longitude VARCHAR(20) NOT NULL,
+latitude VARCHAR(20) NOT NULL,
+address varchar(200) NOT NULL,
+city VARCHAR(50) NOT NULL,
+state VARCHAR(50) NOT NULL,
+zip INT(10) NOT NULL,
+PRIMARY KEY (merchantlocationID)
+);
+
+alter table MerchantLocation AUTO_INCREMENT=1;
+
+
+CREATE TABLE Product
+(
+   productID INT(7) AUTO_INCREMENT,
+   productname varchar(60) NOT NULL,
+   productdescription varchar(100) NOT NULL, 
+   price double(7,2),
+   username varchar(25) NOT NULL,
+   PRIMARY KEY(productID),
+   FOREIGN KEY (username) REFERENCES Advertiser(username)
+  ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+alter table Product AUTO_INCREMENT=1;
+
+CREATE TABLE Contract
+(
+contractID INT(7) AUTO_INCREMENT,
+contractname VARCHAR(50) NOT NULL,
+username varchar(25) NOT NULL,
+contractcreatedby varchar(50) NOT NULL,
+contractdate DATE NOT NULL,
+space varchar(5) NOT NULL,
+startdate DATE NOT NULL,
+enddate DATE NOT NULL,
+paymenttype VARCHAR(25) NOT NULL,
+status varchar(20) NOT NULL,
+PRIMARY KEY(contractID),
+FOREIGN KEY(username) REFERENCES Advertiser(username)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+alter table Contract AUTO_INCREMENT=1;
+
+CREATE TABLE Advertisement(
+adID INT(7) AUTO_INCREMENT,
+adname varchar(50) NOT NULL,
+addesc varchar(150) NOT NULL,
+contractID INT(7) NOT NULL,
+adstartdate DATE NOT NULL,
+adenddate DATE NOT NULL,
+PRIMARY KEY(adID),
+FOREIGN KEY (contractID) REFERENCES Contract(contractID)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+alter table Advertisement AUTO_INCREMENT=1;
+
+CREATE TABLE AD_Product (
+adID INT(7),
+productID INT(7),
+adfilelocation VARCHAR(250) NOT NULL,
+adSize VARCHAR(25) NOT NULL,
+PRIMARY KEY (adID, productID),
+FOREIGN KEY(adID) REFERENCES Advertisement (adID),
+FOREIGN KEY(productID) REFERENCES Product (productID)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Channel_AD (
+     channelID INT(7),
+     adID INT(7),
+     FOREIGN KEY(channelID) REFERENCES Channel(channelID),
+     FOREIGN KEY(adID) REFERENCES Advertisement(adID)
+     ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+CREATE TABLE AdSpace 
+(
+  adspaceID varchar(10) PRIMARY KEY,
+  adspacedetails varchar(100) NOT NULL,
+  isavailable boolean
+);
+
+CREATE TABLE AdSpaceSchedule
+(
+  adspacescehduleID varchar(10) PRIMARY KEY,
+  adspaceID varchar(10) NOT NULL,
+  adspacestartdate DATE NOT NULL,
+  adspaceenddate DATE NOT NULL,
+  FOREIGN KEY (adspaceID) REFERENCES AdSpace(adspaceID)
+   ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+create table Ad_Merchant(
+    merchantlocationID INT(7),
+    adID INT(7),
+    FOREIGN KEY (merchantlocationID) REFERENCES Merchantlocation(merchantlocationID),
+    FOREIGN KEY (adID) REFERENCES Advertisement(adID)
+    ON DELETE CASCADE ON UPDATE CASCADE
+    );
+
+
+CREATE TABLE Administrator
+     (
+     username varchar(25) NOT NULL,
+     password varchar(8) NOT NULL,
+     firstname varchar(50) NOT NULL,
+     lastname varchar(50) NOT NULL
+);
+
+create table category(
+categoryID int(7) AUTO_INCREMENT,
+categoryname varchar(50) NOT NULL,
+descr varchar(350) NOT NULL,
+PRIMARY KEY (categoryID)
+);
+
+create table Cat_Channel(
+categoryID int(7),
+channelID int(7),
+FOREIGN KEY(channelID) REFERENCES Channel(channelID),
+FOREIGN KEY(categoryID) REFERENCES Category(categoryID)
+);
+

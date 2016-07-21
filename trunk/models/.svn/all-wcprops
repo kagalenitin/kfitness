@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/3/trunk/models
+END
+trainermodel.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3/trunk/models/trainermodel.php
+END
+adminmodel.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/3/trunk/models/adminmodel.php
+END
+usermodel.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/3/trunk/models/usermodel.php
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/3/trunk/views
+END
+selecttrainer.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3/trunk/views/selecttrainer.php
+END
+welcomeadmin.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/views/welcomeadmin.php
+END
+homepage.php
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/views/homepage.php
+END
+edituserprofile.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/views/edituserprofile.php
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/3/trunk/views/email.php
+END
+userlogin.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/views/userlogin.php
+END
+newuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/3/trunk/views/newuser.php
+END
+welcomeuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/3/trunk/views/welcomeuser.php
+END
+listusers.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/3/trunk/views/listusers.php
+END
+trainerlogin.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/views/trainerlogin.php
+END
+newtrainer.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/3/trunk/views/newtrainer.php
+END
+reportsession.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3/trunk/views/reportsession.php
+END
+welcometrainer.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/views/welcometrainer.php
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test
+END
+contents.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test/contents.html
+END
+test_callback.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test/test_callback.php
+END
+test.png
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test/test.png
+END
+phpmailerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test/phpmailerTest.php
+END
+testemail.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/PHPMailer_v5.1/test/testemail.php
+END

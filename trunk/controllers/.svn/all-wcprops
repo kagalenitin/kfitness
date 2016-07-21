@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/3/trunk/controllers
+END
+trainerController.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/trunk/controllers/trainerController.php
+END
+defaultController.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2/trunk/controllers/defaultController.php
+END
+homeController.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/trunk/controllers/homeController.php
+END
+userController.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/3/trunk/controllers/userController.php
+END
